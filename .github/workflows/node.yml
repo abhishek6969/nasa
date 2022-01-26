@@ -26,4 +26,5 @@ jobs:
           mongodb-version: ${{ matrix.mongodb-version }}
       - run: npm install
       - run: npm run build --prefix client
+      - run: npm config set cache '/home/runner/.npmrc' --global
       - run: npm test
